@@ -1,9 +1,11 @@
-import com.google.gson.Gson;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("Testando a aplicação");
+        System.out.println("****** Conversor de Moedas ******");
 
-        Gson gson = new Gson();
+        Requisicao requisicao = new Requisicao();
+        String url = requisicao.RequisicaoBusca();
+        System.out.println(url);
+
     }
 }
