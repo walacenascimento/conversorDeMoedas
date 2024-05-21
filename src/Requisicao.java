@@ -7,7 +7,7 @@ import java.net.http.HttpResponse;
 public class Requisicao {
 
     // Método para efetuar a requisição e obter reposta da API
-    public String RequisicaoBusca() {
+    public String RequisicaoBusca() throws IOException, InterruptedException {
 
         String APIkey = "362d8f2a182479f2f397c9c3";
         String endereco = "https://v6.exchangerate-api.com/v6/" + APIkey + "/latest/USD";
@@ -19,14 +19,9 @@ public class Requisicao {
                 .build();
 
         // Resposta
-        HttpResponse<String> response = null;
-        try {
-            response = client
+        HttpResponse<String> response = client
                     .send(request, HttpResponse.BodyHandlers.ofString());
-        } catch (IOException | InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
         return response.body();
+
     }
 }
