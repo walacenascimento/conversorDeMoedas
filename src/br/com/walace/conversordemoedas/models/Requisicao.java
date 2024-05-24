@@ -33,7 +33,6 @@ public class Requisicao {
     public String requisicaoApi( )  throws IOException, InterruptedException {
 
         String APIkey = "362d8f2a182479f2f397c9c3";
-//      String endereco = "https://v6.exchangerate-api.com/v6/" + APIkey +"/latest/USD";
         String endereco = "https://v6.exchangerate-api.com/v6/"
                 + APIkey + "/pair/" + this.base_code +  "/" + this.target_code + "/" + this.amount;
 
