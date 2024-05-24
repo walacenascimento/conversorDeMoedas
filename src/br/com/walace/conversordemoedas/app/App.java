@@ -1,6 +1,7 @@
 package br.com.walace.conversordemoedas.app;
 
 import br.com.walace.conversordemoedas.models.Menu;
+
 import java.io.IOException;
 
 public class App {
@@ -9,5 +10,6 @@ public class App {
 
         Menu menu = new Menu();
         menu.menu();
+
     }
 }
